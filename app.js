@@ -7,5 +7,10 @@ const login = (user) => {
     default:
       return "Unauthorized";
   }
-};
+
+  if (user.role === "admin") {
+    return "Welcome Admin";
+  }
+  return "Access Denied";
+}
 module.exports = login;
