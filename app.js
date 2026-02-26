@@ -1,16 +1,9 @@
-
-const login = (user) => {
-  switch(user.role) {
-    case "student":
-      return "Student Dashboard";
-    case "admin":
-      return "Admin Dashboard";
-    default:
-      return "Unauthorized";
+function login(user) {
+  if (user.type === "student") {
+    return "Student Portal Access";
   }
-
-  if (user.role === "admin") {
-    return "Welcome Admin";
+  if (user.type === "admin") {
+    return "Admin Portal Access";
   }
   return "Access Denied";
 }
