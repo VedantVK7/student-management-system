@@ -1,4 +1,4 @@
-function login(user) {
+const studentLogin = (user) => {
   if (user.type === "student") {
     return "Student Portal Access";
   }
